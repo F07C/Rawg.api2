@@ -16,7 +16,7 @@ const getPlatformStr = (platforms) => {
 function loadGames(url){
     
     
-    // Fetch recently released games from RAWG API
+    
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -27,7 +27,7 @@ function loadGames(url){
                 const gameItemEl = `
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="item">
-                        
+                            <img src="${game.background_image}" alt="${game.name} image">
                             <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.parent_platforms)}</span></h4>
                             <ul>
                             <li><i class=""></i> <span class="rating"></span></li>
